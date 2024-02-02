@@ -19,23 +19,29 @@
                 android:id="@+id/View_Pager_Slide_Img"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
+                <me.relex.circleindicator.CircleIndicator
+                    android:id="@+id/Circle_Indicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    app:ci_drawable="@drawable/background_indicator">
+                </me.relex.circleindicator.CircleIndicator>
             </androidx.viewpager.widget.ViewPager>
 
-            <me.relex.circleindicator.CircleIndicator
-                android:id="@+id/Circle_Indicator"
-                android:layout_width="wrap_content"
-                android:layout_height="50dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginTop="5dp"
-                app:ci_drawable="@drawable/background_indicator">
-            </me.relex.circleindicator.CircleIndicator>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_weight="7"
             android:orientation="vertical">
-
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/Recycle_View"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="10dp"
+    android:layout_marginBottom="10dp">
+</androidx.recyclerview.widget.RecyclerView>
         </LinearLayout>
 
     </LinearLayout>
