@@ -6,6 +6,7 @@
     tools:context=".fragments.AccountFragment">
 
     <TextView
+        android:id="@+id/Text_Test"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Account"
