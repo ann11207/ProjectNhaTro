@@ -1,10 +1,13 @@
 package com.example.projectnhatro;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -25,6 +28,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     public void setData(List<Product> list){
         this.List_Product = list;
+
         notifyDataSetChanged();
     }
     @NonNull
@@ -36,12 +40,29 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-Product product = List_Product.get(position);
+final Product product = List_Product.get(position);
 if (product == null){
     return;
 }
 holder.imgProduct.setImageResource(product.getResourceImage());
 holder.textView_Product.setText(product.getName());
+holder.LayoutItem.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        onClickGoToDetail(product);
+    }
+});
+    }
+    private void onClickGoToDetail(Product product) {
+        // Tạo Intent để chuyển từ MainActivity sang SubActivity
+        Intent intent = new Intent(mContext, sub_activity.class);
+
+        // Đặt dữ liệu vào Intent để chuyển sang SubActivity
+        intent.putExtra("product_image", product.getResourceImage()); // Chuyển resource ID của hình ảnh
+        intent.putExtra("product_name", product.getName()); // Chuyển tên của sản phẩm
+
+        // Chạy Intent để chuyển sang SubActivity
+        mContext.startActivity(intent);
     }
 
     @Override
@@ -56,12 +77,14 @@ holder.textView_Product.setText(product.getName());
     public class ProductViewHolder extends RecyclerView.ViewHolder{
         // khai báo thành phần có trong item_product
 
+        private LinearLayout LayoutItem;
         private ImageView imgProduct;
 
         private TextView textView_Product;
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            LayoutItem = itemView.findViewById(R.id.layout_item);
             imgProduct = itemView.findViewById(R.id.img_product);
 
             textView_Product = itemView.findViewById(R.id.textView_Product);

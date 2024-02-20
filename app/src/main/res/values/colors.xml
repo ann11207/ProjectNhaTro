@@ -4,4 +4,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="lightgray">#b2bec3</color>
     <color name="backGround">#fdcb6e</color>
+    <color name="greendarner">#0652DD</color>
 </resources>

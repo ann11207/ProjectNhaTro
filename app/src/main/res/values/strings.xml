@@ -1,6 +1,11 @@
 <resources>
     <string name="app_name">ProjectNhaTro</string>
     <string name="button_call">Liên hệ</string>
+    <string name="description">Cách Trung tâm thương mại Vincom Nguyễn Chí Thanh 1.9 km, 22Housing luxury Hotel và Residence 39 Linh Lang có phòng chờ chung, điều hòa, ban công và Wi-Fi miễn phí. Chỗ nghỉ có bể sục và bồn tắm spa.
+
+Căn hộ có sân hiên nơi khách có thể nhìn ra thành phố, khu vực ghế ngồi, TV màn hình phẳng truyền hình vệ tinh, bếp đầy đủ tiện nghi gồm tủ lạnh và máy rửa bát, cùng phòng tắm riêng được trang bị vòi xịt/chậu rửa vệ sinh và đồ vệ sinh cá nhân miễn phí. Lò nướng, lò vi sóng và bếp, cũng như máy pha cà phê và ấm đun nước đều được cung cấp.
+
+22Housing luxury Hotel  Residence 39 Linh Lang cách Bảo tàng dân tộc học Việt Nam 2.2 km và Chùa Một Cột 2.8 km. Sân bay gần nhất là Sân bay Quốc tế Nội Bài, cách chỗ nghỉ 22 km, đồng thời chỗ nghỉ có cung cấp dịch vụ đưa đón sân bay mất phí.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
