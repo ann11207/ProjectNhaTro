@@ -3,13 +3,137 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragments.AccountFragment">
-
-    <TextView
-        android:id="@+id/Text_Test"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.AccountFragment"
+    android:background="@drawable/background_houserent"
+    android:orientation="vertical"
+    android:weightSum="10">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="190dp"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
+        android:layout_gravity="center"
+        android:background="@drawable/logo_houserent">
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Account"
-        android:textSize="50sp"/>
+        android:layout_height="0dp"
+        android:layout_weight="6">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="50dp"
+            app:cardElevation="70dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="18dp"
+                android:orientation="vertical">
 
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Xin chào !!"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#f6b93b">
+            </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng nhập với thông tin của bạn !"
+                    android:alpha="0.8"
+                    android:layout_marginTop="3dp">
+                </TextView>
+                <View
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp">
+                </View>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:orientation="vertical">
+
+                <LinearLayout
+
+                    android:id="@+id/Linear_TaiKhoan"
+                    android:layout_width="match_parent"
+                    android:layout_height="75dp"
+                    android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/TextView_TaiKhoan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tài khoản: "
+                    android:textSize="20sp"
+                    android:alpha="1">
+                </TextView>
+                    <EditText
+                        android:minWidth="100dp"
+                        android:minHeight="48dp"
+                       android:layout_toRightOf="@id/TextView_TaiKhoan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-8dp">
+                    </EditText>
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="90dp"
+                        android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="75dp"
+                        android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/TextView_MatKhau"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Mật khẩu: "
+                        android:textSize="20sp"
+                        android:alpha="1">
+                    </TextView>
+                    <EditText
+                        android:minWidth="100dp"
+                        android:minHeight="48dp"
+                        android:id="@+id/EditText_MatKhau"
+                        android:inputType="textPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="-8dp">
+                    </EditText>
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+                        </CheckBox>
+                    </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+             <CheckBox
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginTop="-30dp"
+                 android:layout_marginLeft="185dp"
+                 android:text="Lưu mật khẩu">
+             </CheckBox>
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-50dp"
+
+                    android:text="Hiển thị mật khẩu">
+                </CheckBox>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Đăng nhập"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center">
+                </Button>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
 </LinearLayout>
