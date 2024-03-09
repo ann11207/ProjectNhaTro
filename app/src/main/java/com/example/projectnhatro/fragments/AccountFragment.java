@@ -14,6 +14,7 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.projectnhatro.DashBoard;
 import com.example.projectnhatro.R;
 
 
@@ -42,7 +43,7 @@ public class AccountFragment extends Fragment {
         textView_Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), Register.class);
+                Intent intent = new Intent(getActivity(), DashBoard.class);
                 startActivity(intent);
             }
         });

@@ -5,4 +5,5 @@
     <color name="lightgray">#b2bec3</color>
     <color name="backGround">#fdcb6e</color>
     <color name="greendarner">#0652DD</color>
+    <color name="transparent">#80FFFFFF</color>
 </resources>
