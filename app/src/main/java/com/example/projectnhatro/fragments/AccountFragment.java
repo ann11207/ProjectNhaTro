@@ -1,5 +1,6 @@
 package com.example.projectnhatro.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -29,11 +30,22 @@ public class AccountFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_account, container, false);
 
+
+
         // reference CheckBox and EditText
         checkBox_ShowPass = view.findViewById(R.id.checkbox_ShowPassWord);
         editText_Pass = view.findViewById(R.id.EditText_PassWord);
 
+        // click intent switch to register
+        TextView textView_Register = view.findViewById(R.id.textView_Register);
 
+        textView_Register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), Register.class);
+                startActivity(intent);
+            }
+        });
         //checkbox show password
         checkBox_ShowPass.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
