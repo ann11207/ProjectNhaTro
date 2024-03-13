@@ -44,7 +44,6 @@ private Runnable runnable = new Runnable() {
         else {
             ViewPagerImg.setCurrentItem(ViewPagerImg.getCurrentItem()+1);
         }
-        ViewPagerImg.setCurrentItem(ViewPagerImg.getCurrentItem()+1);
     }
 };
     @Override

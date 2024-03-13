@@ -1,6 +1,8 @@
 package com.example.projectnhatro;
 
-public class Product {
+import java.io.Serializable;
+
+public class  Product implements Serializable {
 
     private int resourceImage;
     private String name;
