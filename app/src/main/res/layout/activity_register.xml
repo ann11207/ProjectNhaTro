@@ -108,6 +108,7 @@
                             android:backgroundTint="#2196F3">
                         </Button>
                         <TextView
+                            android:id="@+id/txtRegister_haveAccount"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text=" Đã có tài khoản"

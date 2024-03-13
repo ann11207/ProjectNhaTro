@@ -99,7 +99,7 @@
 <!--                        android:alpha="1">-->
 <!--                    </TextView>-->
                     <EditText
-                        android:id="@+id/edtLogin_PassWWord"
+                        android:id="@+id/edtLogin_PassWord"
                         android:hint="Nhập mật khẩu"
                         android:minWidth="100dp"
                         android:minHeight="48dp"

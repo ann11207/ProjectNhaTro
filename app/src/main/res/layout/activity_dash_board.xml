@@ -62,7 +62,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView 2 -->
+
         <androidx.cardview.widget.CardView
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -95,7 +95,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView 3 -->
+
         <androidx.cardview.widget.CardView
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -128,7 +128,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView 4 -->
+
         <androidx.cardview.widget.CardView
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -196,7 +196,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
 
-        <!-- CardView 6 -->
+
         <androidx.cardview.widget.CardView
             android:layout_width="150dp"
             android:layout_height="150dp"
@@ -214,6 +214,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/dashboard_LogOut"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:src="@drawable/icon_logout"
