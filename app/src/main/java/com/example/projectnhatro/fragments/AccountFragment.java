@@ -35,15 +35,15 @@ public class AccountFragment extends Fragment {
 
         // reference CheckBox and EditText
         checkBox_ShowPass = view.findViewById(R.id.checkbox_ShowPassWord);
-        editText_Pass = view.findViewById(R.id.EditText_PassWord);
+
 
         // click intent switch to register
-        TextView textView_Register = view.findViewById(R.id.textView_Register);
+        TextView textView_Register = view.findViewById(R.id.txtLogin_Register);
 
         textView_Register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), DashBoard.class);
+                Intent intent = new Intent(getActivity(), Register.class);
                 startActivity(intent);
             }
         });
