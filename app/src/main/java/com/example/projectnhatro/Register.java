@@ -51,7 +51,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
 
                 String user = edt_userName.getText().toString();
-                String pass = edt_passWord.getText().toString();
+                String pass = edt_passWord.getText().toString().trim();
                 String repass = edt_rePassWord.getText().toString();
 
                 userDB userDB = new userDB(Register.this);
@@ -59,6 +59,9 @@ public class Register extends AppCompatActivity {
                 if (user.equals("")|| pass.equals("")||repass.equals(""))
                     Toast.makeText(Register.this, "nhập thông tin", Toast.LENGTH_SHORT).show();
                 else {
+                    if (pass.length()<6 || !pass.matches(".*[A-Z].*")){
+                        Toast.makeText(Register.this, "Mật khẩu phải có 6 ký tự và 1 chữ hoa ", Toast.LENGTH_SHORT).show();
+                    }
 
                     if (pass.equals(repass)){
                         Boolean checkuser =  userDB.chekusername(user);
@@ -83,8 +86,5 @@ public class Register extends AppCompatActivity {
                 }
             }
         });
-
-
-
     }
 }

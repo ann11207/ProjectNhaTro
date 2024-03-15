@@ -1,6 +1,7 @@
 package com.example.projectnhatro.fragments;
 
 public class Photo {
+
     private int resourceId;
 public  Photo(int resourceId){
     this.resourceId = resourceId;

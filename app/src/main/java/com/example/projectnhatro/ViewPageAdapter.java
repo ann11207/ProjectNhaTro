@@ -18,10 +18,8 @@ public class ViewPageAdapter extends FragmentStateAdapter {
     public Fragment createFragment(int position) {
         switch (position){
             case 0:
-                return new SearchFragment();
-            case 1:
                 return  new HomeFragment();
-            case 2:
+            case 1:
                 return new AccountFragment();
             default:
                 return new HomeFragment();
@@ -30,6 +28,6 @@ public class ViewPageAdapter extends FragmentStateAdapter {
 
     @Override
     public int getItemCount() {
-        return 3;
+        return 2;
     }
 }
