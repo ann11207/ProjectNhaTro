@@ -1,8 +1,14 @@
 package com.example.projectnhatro;
 
+import android.widget.Button;
+
 import java.io.Serializable;
 
 public class  Product implements Serializable {
+
+
+
+
 
     private int resourceImage;
     private String name;

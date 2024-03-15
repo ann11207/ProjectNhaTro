@@ -110,6 +110,7 @@
             </TextView>
         </ScrollView>
         <Button
+            android:id="@+id/btnSubActivity_Contact"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:layout_width="150dp"

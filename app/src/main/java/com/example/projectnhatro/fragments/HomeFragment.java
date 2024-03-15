@@ -27,6 +27,7 @@ import me.relex.circleindicator.CircleIndicator;
 
 public class HomeFragment extends Fragment {
 
+    Button btn_Contact;
     private RecyclerView rcv_Product;
     private ProductAdapter productAdapter;
 
@@ -51,6 +52,9 @@ private Runnable runnable = new Runnable() {
                              Bundle savedInstanceState)
     {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
+
+
+
 // recycle list item
 
         rcv_Product = view.findViewById(R.id.Recycle_View);
@@ -121,4 +125,6 @@ private Runnable runnable = new Runnable() {
 
         return list;
  }
+
+
 }
