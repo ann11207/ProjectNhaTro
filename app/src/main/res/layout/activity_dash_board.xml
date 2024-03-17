@@ -44,6 +44,7 @@
                 android:orientation="vertical">
 
                 <ImageButton
+                    android:id="@+id/dashBoard_Cash"
                     android:layout_width="150dp"
                     android:layout_height="100dp"
                     android:src="@drawable/icon_dollar"
