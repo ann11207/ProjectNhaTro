@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Cash"
+    android:orientation="vertical">
+    
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:layout_margin="10dp"-->
+<!--        android:orientation="vertical">-->
+<!--        <EditText-->
+<!--            android:id="@+id/editTextDate"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Chọn ngày"-->
+<!--            android:focusable="false" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextOldReading"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Số điện cũ "-->
+<!--            android:inputType="number">-->
+<!--        </EditText>-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextNewReading"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:hint="Số điện mới">-->
+<!--        </EditText>-->
+<!--        <Spinner-->
+<!--            android:id="@+id/spinnerPrice"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+<!--        <Button-->
+<!--            android:id="@+id/calculateButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="Tính tiền ">-->
+<!--        </Button>-->
+<!--        <TextView-->
+<!--            android:id="@+id/resultView"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="350dp">-->
+
+<!--        </TextView>-->
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:orientation="horizontal">-->
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Lưu">-->
+<!--            </Button>-->
+<!--            <Button-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="share">-->
+<!--            </Button>-->
+<!--        </LinearLayout>-->
+
+<!--    </LinearLayout>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/edtCash_nameHouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID "
+            android:editable="false">
+        </EditText>
+        <EditText
+            android:id="@+id/edtCash_nameFirstLast"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Số phòng "
+            android:inputType="number">
+        </EditText>
+        <EditText
+            android:id="@+id/edtCash_Room"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Họ tên người thuê"
+            >
+        </EditText>
+        <EditText
+            android:id="@+id/edtCash_Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ngày thuê "
+            android:focusable="false"
+            android:clickable="true" >
+        </EditText>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <Button
+            android:id="@+id/btnCash_addRenter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thêm"
+            android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/btnCash_Edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sửa"
+                android:layout_margin="5dp"/>
+            <Button
+                android:id="@+id/btnCash_Dele"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="xoá"
+                android:layout_margin="5dp">
+            </Button>
+            <Button
+                android:id="@+id/btnCash_Show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hiển thị"
+                android:layout_margin="5dp">
+            </Button>
+        </LinearLayout>
+        <ListView
+            android:id="@+id/lsvCash_showView"
+            android:layout_width="match_parent"
+            android:layout_height="350dp">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>

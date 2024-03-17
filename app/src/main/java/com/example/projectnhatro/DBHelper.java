@@ -1,17 +1,22 @@
 package com.example.projectnhatro;
 
+import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 
+import java.io.Console;
+
 public class DBHelper extends SQLiteOpenHelper {
 
-    public static  final String DBNAME = "login.db";
+    public static final String DBNAME = "login.db";
 
     public DBHelper(Context context) {
-        super(context,"Login.db",null,1);
+        super(context, "Login.db", null, 1);
     }
 
 
@@ -19,6 +24,7 @@ public class DBHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase MyDB) {
 
         MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
+        MyDB.execSQL("create Table renter(id INTEGER PRIMARY KEY AUTOINCREMENT, rentName TEXT , numHouse TEXT , rentDate TEXT, nameFirstLast TEXT )");
     }
 
     @Override
@@ -26,7 +32,9 @@ public class DBHelper extends SQLiteOpenHelper {
 
         MyDB.execSQL("drop Table if exists users");
 
-    }
+        MyDB.execSQL("drop Table if exists renter");
 
+        onCreate(MyDB);
+    }
 
 }
