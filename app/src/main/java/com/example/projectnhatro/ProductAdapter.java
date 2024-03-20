@@ -75,7 +75,7 @@ holder.LayoutItem.setOnClickListener(new View.OnClickListener() {
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder{
-        // khai báo thành phần có trong item_product
+
 
         private LinearLayout LayoutItem;
         private ImageView imgProduct;

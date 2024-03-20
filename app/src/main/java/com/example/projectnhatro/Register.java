@@ -34,7 +34,6 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intentSwitchPageLogin = new Intent(Register.this, AccountFragment.class);
-
                 startActivity(intentSwitchPageLogin);
             }
         });

@@ -25,6 +25,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
         MyDB.execSQL("create Table renter(id INTEGER PRIMARY KEY AUTOINCREMENT, rentName TEXT , numHouse TEXT , rentDate TEXT, nameFirstLast TEXT )");
+        MyDB.execSQL("create Table cash(numHouse Text, newElectric INTEGER, oldElectric INTEGER, WATER INTEGER, cashRent INTEGER, totalCash INTEGER, FOREIGN KEY (numHouse) REFERENCES renter(numHouse))");
     }
 
     @Override
@@ -34,7 +35,10 @@ public class DBHelper extends SQLiteOpenHelper {
 
         MyDB.execSQL("drop Table if exists renter");
 
+        MyDB.execSQL("drop Table if exists cash");
+
         onCreate(MyDB);
     }
+
 
 }
