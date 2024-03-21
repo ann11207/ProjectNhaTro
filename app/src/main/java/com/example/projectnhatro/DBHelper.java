@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -25,7 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
         MyDB.execSQL("create Table renter(id INTEGER PRIMARY KEY AUTOINCREMENT, rentName TEXT , numHouse TEXT , rentDate TEXT, nameFirstLast TEXT )");
-        MyDB.execSQL("create Table cash(numHouse Text, newElectric INTEGER, oldElectric INTEGER, WATER INTEGER, cashRent INTEGER, totalCash INTEGER, FOREIGN KEY (numHouse) REFERENCES renter(numHouse))");
+        MyDB.execSQL("create Table cash(numHouse Text, electricUse INTEGER, newElectric INTEGER, oldElectric INTEGER, WATER INTEGER, cashRent INTEGER, totalCash INTEGER, FOREIGN KEY (numHouse) REFERENCES renter(numHouse))");
     }
 
     @Override
@@ -39,6 +40,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         onCreate(MyDB);
     }
+
 
 
 }
