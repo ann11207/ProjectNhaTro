@@ -1,13 +1,18 @@
 package com.example.projectnhatro;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.ActionBarPolicy;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -145,12 +150,41 @@ public class Cash extends AppCompatActivity {
                     renterList.add(data);
                 }
                 res.close();
-
-
                 ArrayAdapter<String> adapter = new ArrayAdapter<>(Cash.this, android.R.layout.simple_list_item_1, renterList);
+
                 lsv_Show.setAdapter(adapter);
             }
+
         });
+
+        lsv_Show.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // Lấy dữ liệu của mục được chọn
+                String selectedItem = (String) parent.getItemAtPosition(position);
+
+                Intent intentBillInfo = new Intent(Cash.this, bill.class);
+
+
+
+                intentBillInfo.putExtra("selectedItem", selectedItem);
+
+
+                startActivity(intentBillInfo);
+
+//                AlertDialog.Builder builder = new AlertDialog.Builder(Cash.this);
+//                builder.setTitle("Chi tiết người thuê");
+//                builder.setMessage(selectedItem);
+//                builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//                    @Override
+//                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.dismiss();
+//                    }
+//                });
+//                builder.show();
+            }
+        });
+
     }
 }
 

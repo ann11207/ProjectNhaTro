@@ -1,0 +1,59 @@
+<!-- activity_bill_detail.xml -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/txtOldElectric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện cũ:"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtNewElectric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Số điện mới:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/txtUseElectric"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điện đã sử dụng:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/txtWater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiền nước:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/txtTotalRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tổng tiền:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginTop="8dp" />
+<Button
+    android:id="@+id/btnBillDetail_Save"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Save">
+</Button>
+
+</LinearLayout>

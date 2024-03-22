@@ -16,6 +16,12 @@
         android:theme="@style/Theme.ProjectNhaTro"
         tools:targetApi="31">
         <activity
+            android:name=".billDetail"
+            android:exported="false" />
+        <activity
+            android:name=".bill"
+            android:exported="false" />
+        <activity
             android:name=".Cash"
             android:exported="false" />
         <activity
