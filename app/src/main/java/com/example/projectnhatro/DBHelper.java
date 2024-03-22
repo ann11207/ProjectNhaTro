@@ -26,7 +26,7 @@ public class DBHelper extends SQLiteOpenHelper {
 
         MyDB.execSQL("create Table users(username TEXT primary key, password TEXT)");
         MyDB.execSQL("create Table renter(id INTEGER PRIMARY KEY AUTOINCREMENT, rentName TEXT , numHouse TEXT , rentDate TEXT, nameFirstLast TEXT )");
-        MyDB.execSQL("create Table cash(numHouse Text, electricUse INTEGER, newElectric INTEGER, oldElectric INTEGER, WATER INTEGER, cashRent INTEGER, totalCash INTEGER, FOREIGN KEY (numHouse) REFERENCES renter(numHouse))");
+        MyDB.execSQL("create Table cash(numHouse Text, electricUse INTEGER, newElectric INTEGER, oldElectric INTEGER, totalCash INTEGER, FOREIGN KEY (numHouse) REFERENCES renter(numHouse))");
     }
 
     @Override
@@ -41,6 +41,21 @@ public class DBHelper extends SQLiteOpenHelper {
         onCreate(MyDB);
     }
 
+    public Boolean saveBill( int electricUse, int newElectric, int totalCash ,int oldElectric){
+        SQLiteDatabase DB = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+//        contentValues.put("numHouse", numHouse);
+        contentValues.put("electricUse", electricUse);
+        contentValues.put("newElectric", newElectric);
+        contentValues.put("oldElectric", oldElectric);
+        contentValues.put("totalCash", totalCash);
 
+        long result = DB.insert("cash",null,contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+
+    }
 
 }

@@ -69,7 +69,7 @@ Intent intentBillDetail = new Intent(bill.this, billDetail.class);
             }
         });
 
-txt_Show = findViewById(R.id.txtBill_Show);
+//txt_Show = findViewById(R.id.txtBill_Show);
 
         }
 
