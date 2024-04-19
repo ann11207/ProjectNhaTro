@@ -46,6 +46,8 @@ DBHelper DB;
 
         DB = new DBHelper(this);
 
+        billdetailDB bill = new billdetailDB(billDetail.this);
+
         btn_Save = findViewById(R.id.btnBillDetail_Save);
         btn_Save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -64,13 +66,13 @@ DBHelper DB;
                  int _totalRent = Integer.parseInt(total_Rent);
                  int _useElectric = Integer.parseInt(use_Electric);
 
-                 boolean save = DB.saveBill(_oldElectric, _newElectric, _totalRent, _useElectric);
+                 boolean save = bill.saveBill(_oldElectric, _newElectric, _totalRent, _useElectric);
 
                  if (save) {
-                     // Toast khi lưu thành công
+
                      Toast.makeText(getApplicationContext(), "Lưu thành công!", Toast.LENGTH_SHORT).show();
                  } else {
-                     // Toast khi lưu không thành công
+
                      Toast.makeText(getApplicationContext(), "Lưu thất bại!", Toast.LENGTH_SHORT).show();
                  }
              } catch (NumberFormatException e) {

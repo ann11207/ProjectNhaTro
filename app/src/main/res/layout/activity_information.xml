@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".information"
+    android:orientation="vertical"
+    android:weightSum="7"
+    android:background="#f6e58d">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="2"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp">
+   <de.hdodenhof.circleimageview.CircleImageView
+       android:layout_width="wrap_content"
+       android:layout_gravity="center"
+       app:civ_border_width="2dp"
+       android:layout_margin="10dp"
+       android:layout_height="wrap_content"
+       android:src="@drawable/avt" />
+</LinearLayout>
+    <LinearLayout
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/txt_title"
+            android:text="123"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40dp">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+        </TextView>
+        <TextView
+
+            android:id="@+id/txt_nameStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="20dp">
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </TextView>
+        <TextView
+            android:id="@+id/idStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="20dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </TextView>
+
+
+        <TextView
+            android:id="@+id/nameTeacher"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="20dp">
+        </TextView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp">
+        </TextView>
+        <TextView
+            android:id="@+id/monhoc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="123"
+            android:textSize="20dp">
+        </TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/scrollText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            </TextView>
+            <TextView
+                android:layout_below="@id/scrollText"
+                android:id="@+id/version"
+                android:gravity="right"
+                android:layout_gravity="bottom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="version 123"
+                android:textSize="23dp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

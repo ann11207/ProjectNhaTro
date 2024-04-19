@@ -26,11 +26,12 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
         this.mContext = mContext.requireContext();
     }
 
-    public void setData(List<Product> list){
+    public void setData(List<Product> list) {
         this.List_Product = list;
 
         notifyDataSetChanged();
     }
+
     @NonNull
     @Override
     public ProductViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -40,19 +41,20 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ProductV
 
     @Override
     public void onBindViewHolder(@NonNull ProductViewHolder holder, int position) {
-final Product product = List_Product.get(position);
-if (product == null){
-    return;
-}
-holder.imgProduct.setImageResource(product.getResourceImage());
-holder.textView_Product.setText(product.getName());
-holder.LayoutItem.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        onClickGoToDetail(product);
+        final Product product = List_Product.get(position);
+        if (product == null) {
+            return;
+        }
+        holder.imgProduct.setImageResource(product.getResourceImage());
+        holder.textView_Product.setText(product.getName());
+        holder.LayoutItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onClickGoToDetail(product);
+            }
+        });
     }
-});
-    }
+
     private void onClickGoToDetail(Product product) {
         // Tạo Intent để chuyển từ MainActivity sang SubActivity
         Intent intent = new Intent(mContext, sub_activity.class);
@@ -67,20 +69,20 @@ holder.LayoutItem.setOnClickListener(new View.OnClickListener() {
 
     @Override
     public int getItemCount() {
-        if (List_Product != null)
-        {
-        return List_Product.size();
+        if (List_Product != null) {
+            return List_Product.size();
         }
         return 0;
     }
 
-    public class ProductViewHolder extends RecyclerView.ViewHolder{
+    public class ProductViewHolder extends RecyclerView.ViewHolder {
 
 
         private LinearLayout LayoutItem;
         private ImageView imgProduct;
 
         private TextView textView_Product;
+
         public ProductViewHolder(@NonNull View itemView) {
             super(itemView);
 
