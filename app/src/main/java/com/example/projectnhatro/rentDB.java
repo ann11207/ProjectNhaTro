@@ -11,12 +11,12 @@ public class rentDB extends DBHelper{
     public rentDB(Context context) {
         super(context);
     }
-    public static synchronized rentDB getInstance(Context context) {
-        if (instance == null) {
-            instance = new rentDB(context.getApplicationContext());
-        }
-        return instance;
-    }
+//    public static synchronized rentDB getInstance(Context context) {
+//        if (instance == null) {
+//            instance = new rentDB(context.getApplicationContext());
+//        }
+//        return instance;
+//    }
 
 
     public boolean addRenter(String rentName, String numHouse, String rentDate, String nameFirstLast) {

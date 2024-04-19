@@ -16,7 +16,7 @@ import com.example.projectnhatro.fragments.AccountFragment;
 
 public class Register extends AppCompatActivity {
 
-    EditText edt_userName , edt_passWord, edt_rePassWord;
+    EditText edt_userName, edt_passWord, edt_rePassWord;
 
     Button btn_Register;
     TextView txt_haveAccount;
@@ -29,7 +29,7 @@ public class Register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         //switch page login with textView
-        txt_haveAccount =  findViewById(R.id.txtRegister_haveAccount);
+        txt_haveAccount = findViewById(R.id.txtRegister_haveAccount);
         txt_haveAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,32 +55,30 @@ public class Register extends AppCompatActivity {
 
                 userDB userDB = new userDB(Register.this);
 
-                if (user.equals("")|| pass.equals("")||repass.equals(""))
+                if (user.equals("") || pass.equals("") || repass.equals(""))
                     Toast.makeText(Register.this, "nhập thông tin", Toast.LENGTH_SHORT).show();
                 else {
-                    if (pass.length()<6 || !pass.matches(".*[A-Z].*")){
+                    if (pass.length() < 6 || !pass.matches(".*[A-Z].*")) {
                         Toast.makeText(Register.this, "Mật khẩu phải có 6 ký tự và 1 chữ hoa ", Toast.LENGTH_SHORT).show();
                     }
 
-                    if (pass.equals(repass)){
-                        Boolean checkuser =  userDB.chekusername(user);
-                        if (checkuser == false){
-                            Boolean insert = userDB.insertData(user,pass);
-                            if (insert == true){
-                                Toast.makeText(Register.this,"Đăng kí thành công!", Toast.LENGTH_SHORT).show();
+                    if (pass.equals(repass)) {
+                        Boolean checkuser = userDB.chekusername(user);
+                        if (checkuser == false) {
+                            Boolean insert = userDB.insertData(user, pass);
+                            if (insert == true) {
+                                Toast.makeText(Register.this, "Đăng kí thành công!", Toast.LENGTH_SHORT).show();
                                 Intent intentSwitchLogin = new Intent(getApplicationContext(), AccountFragment.class);
                                 startActivity(intentSwitchLogin);
-                            }else {
+                            } else {
 
-                                Toast.makeText(Register.this,"Đăng ký không thành công!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(Register.this, "Đăng ký không thành công!", Toast.LENGTH_SHORT).show();
                             }
-                        }
-
-                        else{
-                            Toast.makeText(Register.this,"Tên đăng nhập đã tồn tại ", Toast.LENGTH_SHORT).show();
+                        } else {
+                            Toast.makeText(Register.this, "Tên đăng nhập đã tồn tại ", Toast.LENGTH_SHORT).show();
                         }
                     } else {
-                        Toast.makeText(Register.this, "Mật khẩu không khớp !",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Register.this, "Mật khẩu không khớp !", Toast.LENGTH_SHORT).show();
                     }
                 }
             }

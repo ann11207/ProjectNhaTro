@@ -76,6 +76,8 @@
     </LinearLayout>
 
     <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
         android:id="@+id/ketqua"
         android:text="Tính tiền"
         android:layout_width="wrap_content"

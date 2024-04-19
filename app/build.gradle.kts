@@ -45,7 +45,8 @@ dependencies {
     implementation ("androidx.cardview:cardview:1.0.0")
     implementation ("me.relex:circleindicator:2.1.5")
 
-
+    implementation ("de.hdodenhof:circleimageview:3.1.0")
+    implementation ("com.airbnb.android:lottie:6.4.0")
 
 
 }

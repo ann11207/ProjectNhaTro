@@ -12,7 +12,7 @@ import com.example.projectnhatro.fragments.HomeFragment;
 
 public class DashBoard extends AppCompatActivity {
 
-    ImageButton dsbBTN_logOut, dsbBTN_Cash;
+    ImageButton dsbBTN_logOut, dsbBTN_Cash, dsbBTN_Information;
 
 
     @Override
@@ -39,6 +39,16 @@ public class DashBoard extends AppCompatActivity {
                 startActivity(intentOpenDashBoardCash);
             }
         });
+
+        dsbBTN_Information = findViewById(R.id.dashBoard_Information);
+        dsbBTN_Information.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentOpenDashBoarInformation = new Intent(getApplication(), information.class);
+                startActivity(intentOpenDashBoarInformation);
+            }
+        });
+
     }
 
 }
